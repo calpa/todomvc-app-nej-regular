@@ -1,0 +1,32 @@
+<header class="header">
+	<h1>todos</h1>
+	<input on-enter={ this.addTodo(newTodoTitle) } r-model={ newTodoTitle } class="new-todo" placeholder="What needs to be done?" autofocus>
+</header>
+{#if !!todos.length}
+<section class="main">
+	<input r-model={ allCompleted } class="toggle-all" type="checkbox">
+	<label for="toggle-all">Mark all as complete</label>
+	<ul class="todo-list">
+		{#list this.todoFilter(filter) as todo}
+		<todoItem todo={ todo } on-remove={ this.removeTodo(todo_index) } on-edit={ this.store() } on-toggle={ this.store() }></todoItem>
+		{/list}
+	</ul>
+</section>
+<footer class="footer">
+	<!-- This should be `0 items left` by default -->
+	<span class="todo-count"><strong>{ activeLength }</strong> { activeLength === 1 ? 'item' : 'items'} left</span>
+	<!-- Remove this if you don't implement routing -->
+	<ul class="filters">
+		<li>
+			<a r-class={ {selected: (filter === 'all' || !filter)} } href="#/" on-click={ filter = 'all' }>All</a>
+		</li>
+		<li>
+			<a r-class={ {selected: filter === 'active'} } href="#/active" on-click={ filter = 'active' }>Active</a>
+		</li>
+		<li>
+			<a r-class={ {selected: filter === 'completed'} } href="#/completed" on-click={ filter = 'completed' }>Completed</a>
+		</li>
+	</ul>
+	<button r-hide={ !completedLength } on-click={ this.clearCompleted() } class="clear-completed">Clear completed</button>
+</footer>
+{/if}
