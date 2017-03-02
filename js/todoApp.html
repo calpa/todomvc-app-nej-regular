@@ -13,9 +13,7 @@
 	</ul>
 </section>
 <footer class="footer">
-	<!-- This should be `0 items left` by default -->
 	<span class="todo-count"><strong>{ activeLength }</strong> { activeLength === 1 ? 'item' : 'items'} left</span>
-	<!-- Remove this if you don't implement routing -->
 	<ul class="filters">
 		<li>
 			<a r-class={ {selected: (filter === 'all' || !filter)} } href="#/" on-click={ filter = 'all' }>All</a>
