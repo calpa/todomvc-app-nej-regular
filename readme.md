@@ -32,7 +32,7 @@ npm run dev
 
 ### Articles
 
-### NEJ
+#### NEJ
 
 - [依赖管理](https://github.com/NEYouFan/nej-framework/blob/master/doc/DEPENDENCY.md)
 - [平台适配](https://github.com/NEYouFan/nej-framework/blob/master/doc/PLATFORM.md)
@@ -42,7 +42,7 @@ npm run dev
 - [模板系统](https://github.com/NEYouFan/nej-framework/blob/master/doc/TEMPLATE.md)
 - [组件系统](https://github.com/NEYouFan/nej-framework/blob/master/doc/WIDGET.md)
 
-### Regular.js
+#### Regular.js
 
 - [Regular.js指南](http://regularjs.github.io/guide/zh/index.html)
 
