@@ -11,8 +11,8 @@
   "author": "yuanshenee@163.com",
   "license": "MIT",
   "dependencies": {
-    "todomvc-app-css": "^2.0.0",
-    "todomvc-common": "^1.0.0"
+    "todomvc-app-css": "2.0.6",
+    "todomvc-common": "1.0.3"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
