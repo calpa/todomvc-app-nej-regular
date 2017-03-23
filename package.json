@@ -1,6 +1,6 @@
 {
   "name": "todomvc-app-nej-regular",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "todomvc app using nej and regularjs",
   "private": true,
   "keywords": [
