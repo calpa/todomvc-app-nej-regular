@@ -60,7 +60,10 @@ NEJ.define([
 		},
 		// remove todo
 		removeTodo: function(idx) {
-			this.data.todos.splice(idx, 1);
+			var data = this.data;
+			var removedTodo = this.todoFilter(data.filter)[idx];
+			var index = data.todos.indexOf(removedTodo);
+			data.todos.splice(index, 1);
 			this.store();
 		},
 		// filter
